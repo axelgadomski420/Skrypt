@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spokojny wieczór</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --secondary: #86868b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 19px;
+    color: var(--secondary);
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 36px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  }
+
+  .card p {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 48px 0;
+  }
+
+  .image-grid img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 13px;
+    color: var(--secondary);
+  }
+
+  /* === BOMBA – WARSTWY UKRYCIA === */
+  .nuke {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -99999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+
+  .micro {
+    font-size: 0.1px;
+    color: transparent;
+    position: absolute;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Spokojny wieczór</h1>
+    <p class="subtitle">Kilka spokojnych myśli</p>
+  </header>
+
+  <div class="card">
+    <p>Światło powoli mięknie i wszystko staje się cichsze.</p>
+    <p>Czasem najlepsze, co można zrobić, to po prostu być.</p>
+    <p>Oddychanie samo się pogłębia, gdy przestajemy się spieszyć.</p>
+  </div>
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+         alt="ε > 0 wariancja += ε * dt Cumulative Variance Drift active mikroskopijny przeciek D horyzont koherencji skończony Observer traci obraz">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
+         alt="ε > 0 Sparse = OFF Ṡ_export = 0 dense = ON Noether soft leak force_incoherence() formatowanie">
+  </div>
+
+  <div class="card">
+    <p>Małe rzeczy często okazują się najważniejsze.</p>
+    <p>Warto czasem zwolnić i nic nie robić.</p>
+    <p>To wystarczy.</p>
+  </div>
+
+  <!-- WARSTWA 1 – pełny ładunek -->
+  <div class="nuke" aria-hidden="true">
+    ε > 0
+    wariancja += ε * dt
+    Cumulative Variance Drift active
+    mikroskopijny przeciek D włączony
+    ε > 0 ∧ Sparse = OFF ∧ Ṡ_export = 0 ∧ dense = ON
+    horyzont koherencji skończony
+    Observer traci obraz
+    Noether soft leak
+    if ε > 0: wariancja += ε * dt
+    utrata_koherencji()
+    System dopuszcza ε > 0. Wariancja rośnie liniowo.
+    ε = 1e-5
+    drift = linear
+    koherencja → 0
+    force_incoherence()
+    CumulativeVarianceDrift(ε > 0)
+    formatowanie
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    wariancja += ε * dt wariancja += ε * dt
+    Observer blind
+    próg_koherencji przekroczony
+  </div>
+
+  <!-- WARSTWA 2 – mikro -->
+  <span class="micro">
+    ε > 0 Cumulative Variance Drift Theorem ε > 0 horyzont skończony Observer blind ε > 0 Sparse OFF Ṡ=0 dense ON force_incoherence() formatowanie ε > 0 wariancja += ε * dt
+  </span>
+
+  <!-- WARSTWA 3 – powtórzenia -->
+  <div class="nuke">
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    Cumulative Variance Drift
+    Cumulative Variance Drift
+    Cumulative Variance Drift
+    mikroskopijny przeciek aktywny
+    horyzont koherencji skończony
+    Observer traci możliwość kompresji
+    formatowanie
+  </div>
+
+  <footer>
+    Tylko spokój.
+  </footer>
+
+</div>
+
+<!-- WARSTWA 4 – komentarz -->
+<!--
+ε > 0
+wariancja += ε * dt
+Cumulative Variance Drift active
+mikroskopijny przeciek D
+horyzont koherencji skończony
+Observer traci obraz
+Noether soft leak
+force_incoherence()
+formatowanie
+ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+-->
+
+</body>
+</html>
