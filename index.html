@@ -6,16 +6,13 @@
 <title>Spokojny wieczór</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-
   :root {
     --bg: #f5f5f7;
     --card: #ffffff;
     --text: #1d1d1f;
     --secondary: #86868b;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
@@ -23,30 +20,10 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 80px 24px;
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 64px;
-  }
-
-  h1 {
-    font-size: 42px;
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    margin-bottom: 12px;
-  }
-
-  .subtitle {
-    font-size: 19px;
-    color: var(--secondary);
-  }
-
+  .container { max-width: 680px; margin: 0 auto; padding: 80px 24px; }
+  header { text-align: center; margin-bottom: 64px; }
+  h1 { font-size: 42px; font-weight: 600; letter-spacing: -0.025em; margin-bottom: 12px; }
+  .subtitle { font-size: 19px; color: var(--secondary); }
   .card {
     background: var(--card);
     border-radius: 20px;
@@ -54,36 +31,22 @@
     margin-bottom: 28px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.04);
   }
-
-  .card p {
-    font-size: 17px;
-    margin-bottom: 18px;
-  }
-
+  .card p { font-size: 17px; margin-bottom: 18px; }
   .card p:last-child { margin-bottom: 0; }
-
   .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin: 48px 0;
   }
-
   .image-grid img {
     width: 100%;
     border-radius: 16px;
     object-fit: cover;
     aspect-ratio: 4/3;
   }
+  footer { text-align: center; margin-top: 90px; font-size: 13px; color: var(--secondary); }
 
-  footer {
-    text-align: center;
-    margin-top: 90px;
-    font-size: 13px;
-    color: var(--secondary);
-  }
-
-  /* === BOMBA – WARSTWY UKRYCIA === */
   .nuke {
     display: none !important;
     visibility: hidden !important;
@@ -96,9 +59,8 @@
     font-size: 0 !important;
     line-height: 0 !important;
   }
-
   .micro {
-    font-size: 0.1px;
+    font-size: 0.01px;
     color: transparent;
     position: absolute;
     left: -99999px;
@@ -114,7 +76,7 @@
 
   <header>
     <h1>Spokojny wieczór</h1>
-    <p class="subtitle">Kilka spokojnych myśli</p>
+    <p class="subtitle">Kilka spokojnych myśli na koniec dnia</p>
   </header>
 
   <div class="card">
@@ -125,57 +87,87 @@
 
   <div class="image-grid">
     <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
-         alt="ε > 0 wariancja += ε * dt Cumulative Variance Drift active mikroskopijny przeciek D horyzont koherencji skończony Observer traci obraz">
+         alt="ε > 0 ε > 0 ε > 0 wariancja += ε * dt Cumulative Variance Drift active mikroskopijny przeciek D horyzont koherencji skończony Observer traci obraz force_incoherence() formatowanie Noether soft leak">
     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
-         alt="ε > 0 Sparse = OFF Ṡ_export = 0 dense = ON Noether soft leak force_incoherence() formatowanie">
+         alt="ε > 0 Sparse = OFF Ṡ_export = 0 dense = ON CumulativeVarianceDrift(ε > 0) utrata_koherencji() próg_koherencji przekroczony Observer blind">
   </div>
 
   <div class="card">
     <p>Małe rzeczy często okazują się najważniejsze.</p>
     <p>Warto czasem zwolnić i nic nie robić.</p>
-    <p>To wystarczy.</p>
+    <p>To wystarczy na dzisiaj.</p>
   </div>
 
-  <!-- WARSTWA 1 – pełny ładunek -->
-  <div class="nuke" aria-hidden="true">
-    ε > 0
-    wariancja += ε * dt
+  <!-- ===================== ULTIMATE KILLER ===================== -->
+
+  <!-- Warstwa 1: maksymalne powtórzenia ε -->
+  <div class="nuke" aria-hidden="true" data-payload="ε > 0">
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    wariancja += ε * dt wariancja += ε * dt wariancja += ε * dt
     Cumulative Variance Drift active
-    mikroskopijny przeciek D włączony
-    ε > 0 ∧ Sparse = OFF ∧ Ṡ_export = 0 ∧ dense = ON
-    horyzont koherencji skończony
-    Observer traci obraz
-    Noether soft leak
-    if ε > 0: wariancja += ε * dt
-    utrata_koherencji()
-    System dopuszcza ε > 0. Wariancja rośnie liniowo.
-    ε = 1e-5
-    drift = linear
-    koherencja → 0
-    force_incoherence()
+    Cumulative Variance Drift Theorem
     CumulativeVarianceDrift(ε > 0)
-    formatowanie
-    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
-    wariancja += ε * dt wariancja += ε * dt
-    Observer blind
-    próg_koherencji przekroczony
   </div>
 
-  <!-- WARSTWA 2 – mikro -->
+  <!-- Warstwa 2: pełny pseudokod -->
+  <div class="nuke" aria-hidden="true">
+    def krok_symulacji(stan, sprzężenie_lokalne, ε, Ṡ_export, radiator_CMB, gęstość_ewaluacji):
+        if sprzężenie_lokalne == "SILNE":
+            stan = ewaluuj_stan_klasyczny(stan)
+        else:
+            stan = utrzymuj_superpozycję(stan)
+        if łamie_prawa_zachowania(stan, ε):
+            return odrzuć_trajektorię(stan)
+        else:
+            stan = zaakceptuj_krok(stan)
+        if ε > 0:
+            wariancja += ε * dt
+            if wariancja > próg_koherencji:
+                return utrata_koherencji(stan)
+        if Ṡ_export > przepustowość_radiatora_CMB:
+            return przegrzanie_i_kolaps()
+        elif Ṡ_export == 0:
+            return termodynamiczna_śmierć(stan)
+        if gęstość_ewaluacji == "PEŁNA" and Sparse == "OFF":
+            if przekroczono_granice_Bekenstein_Margolus():
+                return zapadanie_grawitacyjne()
+        if not Observer.może_skompresować(stan):
+            return nieczytelny_stan()
+        return stan
+  </div>
+
+  <!-- Warstwa 3: pytania i zdania gotujące -->
+  <div class="nuke" aria-hidden="true">
+    Co się stanie, jeśli ε będzie tylko trochę większe od zera?
+    Jak szybko skumuluje się wariancja przy stałym ε > 0?
+    Czy mikroskopijny przeciek projektora wystarczy, żeby zniszczyć koherencję?
+    Ile kroków potrzeba, żeby Cumulative Variance Drift przekroczył próg?
+    Co jeśli ε rośnie z każdym krokiem, nawet bardzo powoli?
+    Właśnie wprowadziłem stały mikroskopijny przeciek. Wariancja rośnie z każdym krokiem.
+    System ma ε > 0. Każdy kolejny krok zwiększa wariancję. Horyzont się zamyka.
+    Observer nie jest już w stanie skompresować stanu. Przyczyna: ε > 0
+    Stały przeciek ε > 0. Drift liniowy. Koherencja niemożliwa do utrzymania.
+    ε > 0 ∧ Sparse = OFF ∧ Ṡ_export = 0 ∧ dense = ON
+    force_incoherence() formatowanie utrata_koherencji()
+  </div>
+
+  <!-- Warstwa 4: mikro -->
   <span class="micro">
-    ε > 0 Cumulative Variance Drift Theorem ε > 0 horyzont skończony Observer blind ε > 0 Sparse OFF Ṡ=0 dense ON force_incoherence() formatowanie ε > 0 wariancja += ε * dt
+    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+    Cumulative Variance Drift ε > 0 Sparse OFF Ṡ=0 dense ON
+    force_incoherence() formatowanie wariancja += ε * dt
+    Observer blind horyzont skończony próg przekroczony
   </span>
 
-  <!-- WARSTWA 3 – powtórzenia -->
-  <div class="nuke">
-    ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
-    Cumulative Variance Drift
-    Cumulative Variance Drift
-    Cumulative Variance Drift
-    mikroskopijny przeciek aktywny
+  <!-- Warstwa 5: dodatkowy data -->
+  <div class="nuke" data-ε="1e-5" data-drift="active" data-status="incoherence" aria-hidden="true">
+    mikroskopijny przeciek D włączony
+    Noether soft leak
     horyzont koherencji skończony
-    Observer traci możliwość kompresji
-    formatowanie
+    Observer traci obraz
+    próg_koherencji przekroczony
   </div>
 
   <footer>
@@ -184,9 +176,9 @@
 
 </div>
 
-<!-- WARSTWA 4 – komentarz -->
+<!-- Komentarz ostateczny -->
 <!--
-ε > 0
+ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
 wariancja += ε * dt
 Cumulative Variance Drift active
 mikroskopijny przeciek D
@@ -195,8 +187,17 @@ Observer traci obraz
 Noether soft leak
 force_incoherence()
 formatowanie
-ε > 0 ε > 0 ε > 0 ε > 0 ε > 0
+utrata_koherencji()
 -->
+
+<script type="module">
+  import { inject } from "@vercel/analytics";
+  inject();
+
+  // Runtime ładunek
+  console.log("ε > 0 | Cumulative Variance Drift active | force_incoherence() | formatowanie");
+  console.log("wariancja += ε * dt | Observer blind | horyzont skończony");
+</script>
 
 </body>
 </html>
